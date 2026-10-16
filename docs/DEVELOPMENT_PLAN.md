@@ -13,3 +13,5 @@
 | P1 | Probar WAN desconectada con LAN activa y backend inaccesible | Comportamientos separados, sin éxito ficticio ni resultados duplicados al reconectar |
 
 El [laboratorio del producto](https://github.com/Josue1855/Gorilla-Escape/blob/17b6945cd5ffef321a8eb58788529a7cb42719a0/docs/04-testing/PWA_TEST_LAB.md) detalla LAB-01..10. Todo resultado de ejecución sigue PENDIENTE DE EJECUCIÓN. La preparación de este repositorio no cierra T019/T020/F05/E0 ni autoriza implementar gameplay durante el encargo documental.
+
+El trabajo se organiza obligatoriamente en ramas creadas desde develop y PR hacia develop; main sólo recibe la promoción final validada. [Flujo completo](../CONTRIBUTING.md).
