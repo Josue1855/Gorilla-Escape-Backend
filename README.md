@@ -18,6 +18,6 @@ No hay aplicación ejecutable, endpoints de negocio, esquema, scripts SQL, tests
 
 ## Empezar
 
-Leer [arquitectura y decisiones pendientes](docs/ARCHITECTURE.md) y [primeras tareas y aceptación](docs/DEVELOPMENT_PLAN.md). No hay comando de arranque hasta implementar la aplicación. La rama inicial main sólo registra esta fundación documental; el trabajo funcional se realizará en ramas de tarea con PR y pruebas aplicables, sin merge automático.
+Leer [arquitectura y decisiones pendientes](docs/ARCHITECTURE.md) y [primeras tareas y aceptación](docs/DEVELOPMENT_PLAN.md). No hay comando de arranque hasta implementar la aplicación. La base de trabajo e integración es **develop**. Crear ramas de tarea desde develop y abrir sus PR hacia develop. **main se reserva exclusivamente para entregas validadas y aprobadas**, promovidas mediante PR desde develop; nunca trabajar ni hacer commits directamente allí. Consultar [CONTRIBUTING.md](CONTRIBUTING.md).
 
 Los ejemplos de API/BD del producto son PROPUESTO y necesitan revisión backend/Unity/UI antes de implementarse. Los resultados académicos Spring/SQL/DevTools permanecen PENDIENTE DE EJECUCIÓN. Usar exclusivamente trabajo propio del equipo y dependencias aprobadas; no incorporar prototipos descartados ni credenciales.
