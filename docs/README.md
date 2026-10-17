@@ -8,3 +8,5 @@
 - [Plan de desarrollo y alcance pendiente](DEVELOPMENT_PLAN.md).
 
 El PR #12 contiene la evaluación amplia de arquitectura y permanece separado. Esta rama incluye sólo la aprobación acotada y el primer incremento funcional.
+
+- [Laboratorio PWA: dossier de entrega y evidencias](laboratorio/README.md).

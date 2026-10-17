@@ -1,0 +1,29 @@
+{
+  "query": "SELECT id,display_name,created_at FROM players ORDER BY id",
+  "rows": [
+    [
+      "00000000-0000-4000-8000-000000000001",
+      "Persona Semilla Uno",
+      "2026-10-16T00:00:00Z"
+    ],
+    [
+      "00000000-0000-4000-8000-000000000002",
+      "Persona Semilla Dos",
+      "2026-10-16T00:00:00Z"
+    ],
+    [
+      "bf6eee24-88e7-437f-abd1-9ed1fa2e27f8",
+      "Jugador PWA Laboratorio",
+      "2026-10-17T01:03:09.174620032Z"
+    ],
+    [
+      "e6cb8e70-a0e0-4bfd-814d-e87d4f366a66",
+      "Borrador Offline PWA",
+      "2026-10-17T01:03:49.808813288Z"
+    ]
+  ],
+  "count": 4,
+  "integrity": "ok",
+  "foreignKeyViolations": [],
+  "noInaccessiblePlayer": 0
+}

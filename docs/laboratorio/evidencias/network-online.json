@@ -1,0 +1,354 @@
+{
+  "cursor": 60,
+  "events": [
+    {
+      "sequence": 42,
+      "source": {
+        "tabId": 168743591
+      },
+      "method": "Network.requestWillBeSent",
+      "params": {
+        "documentURL": "http://127.0.0.1:4173/lab.html",
+        "frameId": "C53E1B30BE883F604A504CB0B7E894DE",
+        "hasUserGesture": true,
+        "initiator": {
+          "stack": {
+            "callFrames": [
+              {
+                "columnNumber": 537,
+                "functionName": "T",
+                "lineNumber": 0,
+                "scriptId": "5",
+                "url": "http://127.0.0.1:4173/assets/lab-BDz5Bz5k.js"
+              },
+              {
+                "columnNumber": 4482,
+                "functionName": "$",
+                "lineNumber": 0,
+                "scriptId": "5",
+                "url": "http://127.0.0.1:4173/assets/lab-BDz5Bz5k.js"
+              }
+            ]
+          },
+          "type": "script"
+        },
+        "loaderId": "A051CDAFD33FB282B9C99E800183063C",
+        "redirectHasExtraInfo": false,
+        "request": {
+          "hasPostData": true,
+          "headers": {
+            "Content-Type": "application/json",
+            "Referer": "http://127.0.0.1:4173/lab.html",
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+            "sec-ch-ua": "\"Google Chrome\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Linux\""
+          },
+          "initialPriority": "High",
+          "isSameSite": true,
+          "method": "POST",
+          "mixedContentType": "none",
+          "postData": "{\"displayName\":\"Jugador PWA Laboratorio\"}",
+          "postDataEntries": [
+            {
+              "bytes": "eyJkaXNwbGF5TmFtZSI6Ikp1Z2Fkb3IgUFdBIExhYm9yYXRvcmlvIn0="
+            }
+          ],
+          "referrerPolicy": "strict-origin-when-cross-origin",
+          "url": "http://127.0.0.1:4173/api/players?limit=100&offset=0"
+        },
+        "requestId": "348227.36",
+        "timestamp": 32030.334975,
+        "type": "Fetch",
+        "wallTime": 1792198989.124993
+      }
+    },
+    {
+      "sequence": 45,
+      "source": {
+        "tabId": 168743591
+      },
+      "method": "Network.responseReceived",
+      "params": {
+        "frameId": "C53E1B30BE883F604A504CB0B7E894DE",
+        "hasExtraInfo": true,
+        "loaderId": "A051CDAFD33FB282B9C99E800183063C",
+        "requestId": "348227.36",
+        "response": {
+          "alternateProtocolUsage": "unspecifiedReason",
+          "charset": "",
+          "connectionId": 52763,
+          "connectionReused": false,
+          "encodedDataLength": 270,
+          "fromDiskCache": false,
+          "fromPrefetchCache": false,
+          "fromServiceWorker": false,
+          "headers": {
+            "cache-control": "no-store",
+            "connection": "keep-alive",
+            "content-length": "130",
+            "content-type": "application/json",
+            "date": "Sat, 17 Oct 2026 01:03:09 GMT",
+            "keep-alive": "timeout=60",
+            "server-timing": "app;dur=65.686",
+            "x-request-id": "677247f4-9698-492b-b567-3a1c7cf27b46"
+          },
+          "mimeType": "application/json",
+          "protocol": "http/1.1",
+          "remoteIPAddress": "127.0.0.1",
+          "remotePort": 4173,
+          "responseTime": 1792198989200.832,
+          "securityState": "secure",
+          "status": 201,
+          "statusText": "Created",
+          "timing": {
+            "connectEnd": 1.532,
+            "connectStart": 1.39,
+            "dnsEnd": 1.39,
+            "dnsStart": 1.369,
+            "proxyEnd": -1,
+            "proxyStart": -1,
+            "pushEnd": 0,
+            "pushStart": 0,
+            "receiveHeadersEnd": 73.837,
+            "receiveHeadersStart": 73.786,
+            "requestTime": 32030.337086,
+            "sendEnd": 1.719,
+            "sendStart": 1.625,
+            "sslEnd": -1,
+            "sslStart": -1,
+            "workerFetchStart": -1,
+            "workerReady": -1.658,
+            "workerRespondWithSettled": -1,
+            "workerStart": -1.804
+          },
+          "url": "http://127.0.0.1:4173/api/players?limit=100&offset=0"
+        },
+        "timestamp": 32030.416101,
+        "type": "Fetch"
+      }
+    },
+    {
+      "sequence": 48,
+      "source": {
+        "tabId": 168743591
+      },
+      "method": "Network.loadingFinished",
+      "params": {
+        "encodedDataLength": 400,
+        "requestId": "348227.36",
+        "timestamp": 32030.414667
+      }
+    },
+    {
+      "sequence": 51,
+      "source": {
+        "tabId": 168743591
+      },
+      "method": "Network.requestWillBeSent",
+      "params": {
+        "documentURL": "http://127.0.0.1:4173/lab.html",
+        "frameId": "C53E1B30BE883F604A504CB0B7E894DE",
+        "hasUserGesture": true,
+        "initiator": {
+          "stack": {
+            "callFrames": [
+              {
+                "columnNumber": 537,
+                "functionName": "T",
+                "lineNumber": 0,
+                "scriptId": "5",
+                "url": "http://127.0.0.1:4173/assets/lab-BDz5Bz5k.js"
+              },
+              {
+                "columnNumber": 2761,
+                "functionName": "L",
+                "lineNumber": 0,
+                "scriptId": "5",
+                "url": "http://127.0.0.1:4173/assets/lab-BDz5Bz5k.js"
+              },
+              {
+                "columnNumber": 9851,
+                "functionName": "If",
+                "lineNumber": 36,
+                "scriptId": "6",
+                "url": "http://127.0.0.1:4173/assets/client-CkCYsZd5.js"
+              },
+              {
+                "columnNumber": 10005,
+                "functionName": "jf",
+                "lineNumber": 36,
+                "scriptId": "6",
+                "url": "http://127.0.0.1:4173/assets/client-CkCYsZd5.js"
+              },
+              {
+                "columnNumber": 10062,
+                "functionName": "Uf",
+                "lineNumber": 36,
+                "scriptId": "6",
+                "url": "http://127.0.0.1:4173/assets/client-CkCYsZd5.js"
+              },
+              {
+                "columnNumber": 31421,
+                "functionName": "ii",
+                "lineNumber": 36,
+                "scriptId": "6",
+                "url": "http://127.0.0.1:4173/assets/client-CkCYsZd5.js"
+              },
+              {
+                "columnNumber": 31838,
+                "functionName": "Xs",
+                "lineNumber": 36,
+                "scriptId": "6",
+                "url": "http://127.0.0.1:4173/assets/client-CkCYsZd5.js"
+              },
+              {
+                "columnNumber": 36750,
+                "functionName": "",
+                "lineNumber": 36,
+                "scriptId": "6",
+                "url": "http://127.0.0.1:4173/assets/client-CkCYsZd5.js"
+              },
+              {
+                "columnNumber": 36724,
+                "functionName": "_o",
+                "lineNumber": 39,
+                "scriptId": "6",
+                "url": "http://127.0.0.1:4173/assets/client-CkCYsZd5.js"
+              },
+              {
+                "columnNumber": 8987,
+                "functionName": "gs",
+                "lineNumber": 36,
+                "scriptId": "6",
+                "url": "http://127.0.0.1:4173/assets/client-CkCYsZd5.js"
+              },
+              {
+                "columnNumber": 33124,
+                "functionName": "Ol",
+                "lineNumber": 36,
+                "scriptId": "6",
+                "url": "http://127.0.0.1:4173/assets/client-CkCYsZd5.js"
+              },
+              {
+                "columnNumber": 17348,
+                "functionName": "Zu",
+                "lineNumber": 36,
+                "scriptId": "6",
+                "url": "http://127.0.0.1:4173/assets/client-CkCYsZd5.js"
+              },
+              {
+                "columnNumber": 17136,
+                "functionName": "ec",
+                "lineNumber": 36,
+                "scriptId": "6",
+                "url": "http://127.0.0.1:4173/assets/client-CkCYsZd5.js"
+              }
+            ]
+          },
+          "type": "script"
+        },
+        "loaderId": "A051CDAFD33FB282B9C99E800183063C",
+        "redirectHasExtraInfo": false,
+        "request": {
+          "headers": {
+            "Referer": "http://127.0.0.1:4173/lab.html",
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+            "sec-ch-ua": "\"Google Chrome\";v=\"155\", \"Chromium\";v=\"155\", \"Not(A:Brand\";v=\"24\"",
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": "\"Linux\""
+          },
+          "initialPriority": "High",
+          "isSameSite": true,
+          "method": "GET",
+          "mixedContentType": "none",
+          "referrerPolicy": "strict-origin-when-cross-origin",
+          "url": "http://127.0.0.1:4173/api/players?limit=100&offset=0"
+        },
+        "requestId": "348227.37",
+        "timestamp": 32039.939142,
+        "type": "Fetch",
+        "wallTime": 1792198998.729174
+      }
+    },
+    {
+      "sequence": 54,
+      "source": {
+        "tabId": 168743591
+      },
+      "method": "Network.responseReceived",
+      "params": {
+        "frameId": "C53E1B30BE883F604A504CB0B7E894DE",
+        "hasExtraInfo": true,
+        "loaderId": "A051CDAFD33FB282B9C99E800183063C",
+        "requestId": "348227.37",
+        "response": {
+          "alternateProtocolUsage": "unspecifiedReason",
+          "charset": "",
+          "connectionId": 53441,
+          "connectionReused": false,
+          "encodedDataLength": 264,
+          "fromDiskCache": false,
+          "fromPrefetchCache": false,
+          "fromServiceWorker": false,
+          "headers": {
+            "cache-control": "no-store",
+            "connection": "keep-alive",
+            "content-length": "399",
+            "content-type": "application/json",
+            "date": "Sat, 17 Oct 2026 01:03:18 GMT",
+            "keep-alive": "timeout=60",
+            "server-timing": "app;dur=7.442",
+            "x-request-id": "bf1d7a66-e6a1-4ebc-8e09-dc897beaa4c2"
+          },
+          "mimeType": "application/json",
+          "protocol": "http/1.1",
+          "remoteIPAddress": "127.0.0.1",
+          "remotePort": 4173,
+          "responseTime": 1792198998766.925,
+          "securityState": "secure",
+          "status": 200,
+          "statusText": "OK",
+          "timing": {
+            "connectEnd": 7.562,
+            "connectStart": 7.361,
+            "dnsEnd": 7.361,
+            "dnsStart": 7.275,
+            "proxyEnd": -1,
+            "proxyStart": -1,
+            "pushEnd": 0,
+            "pushStart": 0,
+            "receiveHeadersEnd": 23.61,
+            "receiveHeadersStart": 23.495,
+            "requestTime": 32039.953471,
+            "sendEnd": 7.768,
+            "sendStart": 7.664,
+            "sslEnd": -1,
+            "sslStart": -1,
+            "workerFetchStart": -1,
+            "workerReady": -13.756,
+            "workerRespondWithSettled": -1,
+            "workerStart": -13.903
+          },
+          "url": "http://127.0.0.1:4173/api/players?limit=100&offset=0"
+        },
+        "timestamp": 32039.982362,
+        "type": "Fetch"
+      }
+    },
+    {
+      "sequence": 57,
+      "source": {
+        "tabId": 168743591
+      },
+      "method": "Network.loadingFinished",
+      "params": {
+        "encodedDataLength": 663,
+        "requestId": "348227.37",
+        "timestamp": 32039.979305
+      }
+    }
+  ],
+  "hasMore": false,
+  "truncated": false
+}
