@@ -1,0 +1,31 @@
+{
+  "classification": "LOCAL LINUX / Java21; actual Surefire results, no environment properties copied",
+  "suites": [
+    {
+      "name": "com.gorillaescape.backend.PlayersHttpIntegrationTest",
+      "tests": "13",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "7.196"
+    },
+    {
+      "name": "com.gorillaescape.backend.players.CreatePlayerValidationTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.011"
+    },
+    {
+      "name": "com.gorillaescape.backend.players.PlayerServiceTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0",
+      "time": "0.607"
+    }
+  ],
+  "total": 17,
+  "passed": 17
+}
