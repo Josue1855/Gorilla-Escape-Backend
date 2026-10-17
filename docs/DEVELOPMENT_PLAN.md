@@ -12,7 +12,7 @@
 | P1 | Logs, métricas y laboratorio | Método/HTTP/duración/requestId/JVM, consulta SQL e interfaz coincidentes; evidencias auténticas |
 | P1 | Probar WAN desconectada con LAN activa y backend inaccesible | Comportamientos separados, sin éxito ficticio ni resultados duplicados al reconectar |
 
-El [laboratorio del producto](https://github.com/Josue1855/Gorilla-Escape/blob/17b6945cd5ffef321a8eb58788529a7cb42719a0/docs/04-testing/PWA_TEST_LAB.md) detalla LAB-01..10. El laboratorio completo con frontend sigue pendiente; las evidencias del backend se registran por separado. La preparación de este repositorio no cierra T019/T020/F05/E0 ni autoriza implementar gameplay durante el encargo documental.
+El [laboratorio del producto](https://github.com/Josue1855/Gorilla-Escape/blob/17b6945cd5ffef321a8eb58788529a7cb42719a0/docs/04-testing/PWA_TEST_LAB.md) detalla LAB-01..10. La integración PWA/GET/POST/SQLite y el offline emulado ya fueron ejecutados en el fork; el [dossier](laboratorio/README.md) conserva la evidencia. Quedan tres capturas literales de DevTools, integración al upstream y validación física; no se declara cerrado todo el laboratorio. La preparación de este repositorio no cierra T019/T020/F05/E0 ni autoriza implementar gameplay durante el encargo documental.
 
 ## Incremento actual
 
