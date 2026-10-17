@@ -16,6 +16,8 @@ Se detectaron y corrigieron durante desarrollo: escape de regexp al compilar; co
 
 ## CI y límites
 
-Se añadió CI Ubuntu/Windows con Java21: Maven verify y evidencias de tests; el harness se ejecuta además en Ubuntu. Hasta consultar los jobs del PR, no se declara PASS Windows ni CI. El backend no tenía pipeline antes de este incremento. No hay tests de UI/UX ni despliegue final ejecutados.
+CI Ubuntu/Windows con Java21: **PASS en ambas plataformas**, 17 pruebas por plataforma, sin fallos/errores/omitidos; el harness del JAR también pasó en Ubuntu. [Run 38989509375](https://github.com/Josue1855/Gorilla-Escape-Backend/actions/runs/38989509375), commit ejecutado `36351860624412b0b454a80dc19a7f63704164e0`. Son resultados de esa revisión funcional, anteriores a esta sincronización exclusivamente documental.
 
-Pendiente: consumo React y capturas DevTools, LAN físico/WAN desconectada real, instalador con JRE, cierre por Unity, TLS/auth/fachada de negocio, backup/restore general, actualizaciones más allá de schema inicial y POST idempotente. Los AC amplios de #3/#4/#10 siguen parciales. La issue #13 delimita el incremento y el PR a develop queda para revisión, sin merge automático ni cambios a main.
+La PWA React del fork tiene siete pruebas, build Vite6.4.4 y npm audit sin vulnerabilidades reportadas: [CI PASS 38989521358](https://github.com/Josue1855/Dise-o_pwa/actions/runs/38989521358), commit `69084f53aeabfa2aab4dfd7edaadd64f4c98775b`. El [dossier](laboratorio/README.md) registra la ejecución manual en Chrome real: GET2, POST201/SQL3, recarga offline/listado/borrador, envío manual online201/SQL4 y fallos controlados. No es un test automatizado de UI en CI ni despliegue final.
+
+Pendiente: incorporar el fork React al upstream revisado, tres capturas literales de DevTools, LAN físico/WAN desconectada real, instalador con JRE, cierre por Unity, TLS/auth/fachada de negocio, backup/restore general, actualizaciones más allá de schema inicial y POST idempotente. Los AC amplios de #3/#4/#10 siguen parciales. La issue #13 delimita el incremento y el PR a develop queda para revisión, sin merge automático ni cambios a main.

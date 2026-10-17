@@ -11,3 +11,5 @@ El [contrato REST propuesto](https://github.com/Josue1855/Gorilla-Escape/blob/17
 Para jugadores se aprobaron SQLite/JDBC, Spring Boot, UUID del servidor, migraciones Flyway y almacenamiento por usuario fuera del JAR. La [aprobación acotada](adr/ADR-001-PLAYERS-APPROVAL.md), el [contrato implementado](API_PLAYERS.md) y la [validación real](VALIDATION_PLAYERS.md) delimitan ese alcance. No hay ORM, resultados oficiales ni relación jugador/sesión todavía.
 
 Siguen abiertas: mapeo RTC, credencial del adaptador Unity, outbox/cola, retención, TLS y hosting de distribución final. La LAN HTTP es opt-in para laboratorio aislado; no constituye autenticación. El supervisor existente no se modificó.
+
+La PWA del [fork de laboratorio](https://github.com/Josue1855/Dise-o_pwa/pull/1) ya consume GET/POST mediante proxy local. Su app shell se cachea por Service Worker; IndexedDB guarda snapshot y borrador. No hay reenvío automático ni idempotencia POST. La [evidencia](laboratorio/README.md) corresponde a escritorio con red emulada; UI/UX original y transporte técnico permanecen separados.

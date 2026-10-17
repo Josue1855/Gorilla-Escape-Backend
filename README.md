@@ -1,6 +1,6 @@
 # Gorilla Escape — Backend: primer incremento de jugadores
 
-Spring Boot 4.1.1, Java21, SQLite JDBC 3.53.2.1 y Flyway12.4.0 (versiones del BOM). Estado: incremento funcional en rama para revisión; no es distribución final autocontenida ni frontend integrado. [Aprobación SQLite del PO](docs/adr/ADR-001-PLAYERS-APPROVAL.md), acotada a jugadores; PR #12 de arquitectura permanece separado.
+Spring Boot 4.1.1, Java21, SQLite JDBC 3.53.2.1 y Flyway12.4.0 (versiones del BOM). Estado: incremento funcional en rama para revisión; no es distribución final autocontenida. La integración React/SQLite está probada en el fork de laboratorio y pendiente de revisión/incorporación al upstream UI/UX. [Aprobación SQLite del PO](docs/adr/ADR-001-PLAYERS-APPROVAL.md), acotada a jugadores; PR #12 de arquitectura permanece separado.
 
 ## Empezar en desarrollo
 

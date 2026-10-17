@@ -1,6 +1,6 @@
 # Contrato de jugadores para Hiram / React
 
-Estado: implementación del primer incremento en esta rama; integración UI/UX aún no ejecutada. [OpenAPI JSON](../src/main/resources/static/openapi.json), también servido por GET `/openapi.json` con la app iniciada.
+Estado: primer incremento implementado y consumido por la PWA del [PR de laboratorio #1](https://github.com/Josue1855/Dise-o_pwa/pull/1). GET, POST, renderizado y offline del navegador cuentan con [evidencia real](laboratorio/README.md); la incorporación al upstream de Hiram sigue pendiente. [OpenAPI JSON](../src/main/resources/static/openapi.json), también servido por GET `/openapi.json` con la app iniciada.
 
 Origen de desarrollo por defecto `http://127.0.0.1:8090`. El móvil no debe usar 127.0.0.1 como dirección de la PC: en el teléfono apunta al teléfono. Separar siempre HTTP de negocio del transporte de controles Unity ↔ Java ↔ PWA existente.
 
@@ -29,9 +29,9 @@ Errores del controlador usan application/problem+json: status, type, title, deta
 
 ## Integración de desarrollo
 
-Usar variable de frontend para el origen o proxy Vite **en el repositorio UI/UX por su mantenedor** hacia backend 127.0.0.1:8090. Este encargo no cambia ese repositorio. Para llamadas entre orígenes, configurar `GORILLA_ALLOWED_ORIGINS=http://localhost:5173` en backend; lista separada por comas de orígenes exactos, sin *, paths ni credenciales. GET/POST/OPTIONS y Content-Type; expone X-Request-Id y Server-Timing, sin cookies/credentials.
+El fork de laboratorio ya usa un proxy Vite en desarrollo y `tools/serve-lab.mjs` para la compilación, ambos hacia backend 127.0.0.1:8090. La PWA compilada se abre en http://127.0.0.1:4173/lab.html y llama a `/api/players` por el mismo origen. El upstream Quintana-117/Dise-o_pwa sigue intacto; necesita revisión del mantenedor y una rama develop para recibir el trabajo. Para llamadas entre orígenes, configurar `GORILLA_ALLOWED_ORIGINS=http://localhost:5173` en backend; lista separada por comas de orígenes exactos, sin *, paths ni credenciales. GET/POST/OPTIONS y Content-Type; expone X-Request-Id y Server-Timing, sin cookies/credentials.
 
-Ejemplo de consumo para adaptar, no código integrado:
+Ejemplo mínimo de contrato; el cliente integrado del fork añade límites, validación de respuesta y protección ante envío incierto:
 
 ```javascript
 const response = await fetch(`${apiBase}/api/players`, {
@@ -50,4 +50,4 @@ Por defecto el backend escucha sólo loopback y no incluye autenticación, TLS n
 
 Para producto, conservar backend loopback y añadir una fachada HTTPS autorizada en el Java existente mediante otra tarea revisada. Una PWA HTTPS puede bloquear fetch a HTTP privado por mixed content; configurar CORS no arregla TLS. No modificar DataChannels/IPC ni exponer SQL a LAN. [Mixed content, MDN](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Mixed_content).
 
-Hiram necesita: base URL/puerto acordado, origen permitido o proxy, schema del contrato, manejo de carga/vacío/error y respuesta 201, y ejecutar su validación Network/Console/Application con este backend real. Esta rama no certifica integración React ni offline del navegador.
+Hiram necesita: base URL/puerto acordado, origen permitido o proxy, schema del contrato, manejo de carga/vacío/error y respuesta 201, y ejecutar su validación Network/Console/Application con este backend real. La integración React y la recarga offline se verificaron en Chrome de escritorio en el fork; no se certifican integración al upstream, móvil ni LAN física. El borrador IndexedDB no se reenvía automáticamente y no sustituye idempotencia backend.
