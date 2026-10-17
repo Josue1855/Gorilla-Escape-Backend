@@ -26,3 +26,7 @@ Estructura modular: players/api → players/application → players/domain; infr
 ## Flujo del equipo y enlaces
 
 Ramas de tarea desde develop → PR a develop. main sólo recibe promoción de una entrega completa validada y aprobada; sin commits directos ni merge automático. [Project Backend](https://github.com/users/Josue1855/projects/2), [Unity](https://github.com/Josue1855/Gorilla-Escape), [PWA UI/UX](https://github.com/Quintana-117/Dise-o_pwa). Issues amplias #3/#4/#10 continúan parciales; [BDB-11](https://github.com/Josue1855/Gorilla-Escape-Backend/issues/13) delimita esta entrega. No se presupone un merge del PR #1 ni #12.
+
+## Laboratorio PWA de integración
+
+[Dossier de entrega y evidencias reales](docs/laboratorio/README.md): React, POST/GET, SQLite, Service Worker e IndexedDB. Incluye límites y tres capturas literales de DevTools todavía pendientes. El frontend está en un fork de trabajo; no se modificó el upstream de Hiram.
