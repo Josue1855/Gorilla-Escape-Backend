@@ -34,5 +34,9 @@ jobs:
             *) exit 1 ;;
           esac
           test -n "$TARGET"
-          gh project item-add 1 --owner Josue1855 --url "$TARGET"
-          echo "Added or already present: $TARGET" >> "$GITHUB_STEP_SUMMARY"
+          if gh project item-list 1 --owner Josue1855 --limit 5000 --format json --jq '.items[] | .content.url // empty' | grep -Fqx "$TARGET"; then
+            echo "Existing Project item unchanged: $TARGET" >> "$GITHUB_STEP_SUMMARY"
+          else
+            gh project item-add 1 --owner Josue1855 --url "$TARGET"
+            echo "New Project item added without overwriting fields: $TARGET" >> "$GITHUB_STEP_SUMMARY"
+          fi
