@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           repository: Josue1855/Dise-o_pwa
-          ref: codex/pwa-database-lab
+          ref: develop
           path: pwa
       - uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
         with:
