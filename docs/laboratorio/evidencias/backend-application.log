@@ -1,0 +1,12 @@
+event=backend_ready port=8090 sqliteVersion=3.53.2 schemaVersion=1 javaVersion=21.0.12.1+1-1-24.04.4-Ubuntu
+event=http_request requestId=473c5872-df7f-4a67-bbbc-7bb111d50002 method=GET route=/api/players status=200 durationMs=126.258 jvmHeapUsedBytes=23365216
+event=http_request requestId=cbdbd1bb-0b56-4bd0-9e66-4713e05273e2 method=GET route=/api/players status=200 durationMs=6.501 jvmHeapUsedBytes=23365216
+event=sql_operation operation=players_insert affectedRows=1
+event=http_request requestId=677247f4-9698-492b-b567-3a1c7cf27b46 method=POST route=/api/players status=201 durationMs=65.686 jvmHeapUsedBytes=27559520
+event=http_request requestId=bf1d7a66-e6a1-4ebc-8e09-dc897beaa4c2 method=GET route=/api/players status=200 durationMs=7.442 jvmHeapUsedBytes=27559520
+event=http_request requestId=7497a948-0ea4-4bdd-ad80-10a0cc741e5a method=GET route=/api/players status=200 durationMs=2.625 jvmHeapUsedBytes=27559520
+event=sql_operation operation=players_insert affectedRows=1
+event=http_request requestId=be3229c7-613b-4834-b7d2-af781ae2e9bd method=POST route=/api/players status=201 durationMs=26.107 jvmHeapUsedBytes=27559520
+event=http_request requestId=2b30d5f9-94b6-4ace-b300-a1ee57e414cb method=GET route=/api/players status=200 durationMs=3.352 jvmHeapUsedBytes=27559520
+event=http_request requestId=10ff0ad5-f78f-4548-90ca-cd378741bc03 method=GET route=/api/players status=200 durationMs=2.794 jvmHeapUsedBytes=27559520
+event=http_request requestId=24b41ece-0d75-4f50-aace-4d561511c1d0 method=POST route=/api/players status=400 durationMs=22.090 jvmHeapUsedBytes=31753824

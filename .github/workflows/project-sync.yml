@@ -1,0 +1,42 @@
+name: Sync issues and pull requests to Gorilla Escape Project 1
+on:
+  issues:
+    types: [opened, reopened]
+  pull_request_target:
+    types: [opened, reopened, ready_for_review]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  add-item:
+    if: vars.GORILLA_PROJECT_SYNC_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Verify project token and add current item safely
+        env:
+          GH_TOKEN: ${{ secrets.GORILLA_PROJECT_TOKEN }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          EVENT_NAME: ${{ github.event_name }}
+        shell: bash
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::error::GORILLA_PROJECT_TOKEN is missing; no item added"
+            exit 1
+          fi
+          case "$EVENT_NAME" in
+            issues) TARGET="$ISSUE_URL" ;;
+            pull_request_target) TARGET="$PR_URL" ;;
+            workflow_dispatch)
+              echo 'Manual workflow run: use Project 1 Backfill workflow for existing items.'
+              exit 0 ;;
+            *) exit 1 ;;
+          esac
+          test -n "$TARGET"
+          if gh project item-list 1 --owner Josue1855 --limit 5000 --format json --jq '.items[] | .content.url // empty' | grep -Fqx "$TARGET"; then
+            echo "Existing Project item unchanged: $TARGET" >> "$GITHUB_STEP_SUMMARY"
+          else
+            gh project item-add 1 --owner Josue1855 --url "$TARGET"
+            echo "New Project item added without overwriting fields: $TARGET" >> "$GITHUB_STEP_SUMMARY"
+          fi

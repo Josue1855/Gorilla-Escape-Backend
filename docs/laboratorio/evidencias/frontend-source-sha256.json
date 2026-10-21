@@ -1,0 +1,19 @@
+{
+  "lab.html": "ef2d078b9196b3ba7640dcd13f01cb5fc3e9f278a7114ed764c0c7b0a001c20f",
+  "package-lock.json": "d0a154603a4582bc6298fa1172a177db35214b662ea69afdec0f0727cdaa4ab5",
+  "package.json": "2fe2d84cd5877514e71fb9ee1ce27fab374ed61f05f413e98f85fecb936d785c",
+  "public/icons/lab.svg": "a63e6f7483fe66dc1ddc2251e51bd2f72bd70b210e251253eb94f8ffdb84dbdf",
+  "public/manifest.json": "28d9967300476368f41df25c2fbd5baaa201b5db7630a2faa012e2e81759065f",
+  "src/App.jsx": "64c04754e6b9b0557b3534ea888b5058f212564b7ab1f75a03ad36ec770eb5c1",
+  "src/AvatarList.jsx": "6566167150df82af29d1cb7e29655d0af37ee937038c232dcc9a0a09d49ab04d",
+  "src/LabApp.jsx": "b1288130e6de08b3041efbe600191665e9a8ea50fafd0b7ff67beda8fbdab900",
+  "src/lab-main.jsx": "c8042c784929769cd907104f3f63f3cd85ade5fb515ffab888110859550cf6e2",
+  "src/lab-store.js": "41aae32ec3ffa188f147920e5ccf7753301318e6e4a80a7b8c093252a9f1cd9d",
+  "src/lab.css": "e4825fa8e5e31f83afedc0f15449661b4d8bc2dc9e4b3f2c9b8652a99b1434e9",
+  "src/main.jsx": "311b3be917b82225b86c2317c3142e8bb51eb3b0374750aefd66b4e7a715ec6c",
+  "src/player-api.js": "11608ecca1e8c1f1fe97b0f669221c0d6f2f411a1dd4a4d72738686af0097340",
+  "src/styles.css": "78bea67d54aad53feccee5f3de7e1e48212cf99d413ed5018e3e91a42deef51b",
+  "tools/build-worker.mjs": "a5479b2c9559cc4b6c041d26996c2716e2135d728664a754267cc3d79490b96c",
+  "tools/serve-lab.mjs": "deb44f8566910cf4ecd6891e955b473838558e49eccccd102770aa4bd4839808",
+  "vite.config.js": "ace75aacbb4e49668b7ac674ce965ae4b2c56dbe497cd068585352e8ab6946ce"
+}
