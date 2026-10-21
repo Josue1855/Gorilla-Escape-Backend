@@ -1,0 +1,30 @@
+name: Backend performance smoke
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 9 * * 1'
+permissions:
+  contents: read
+jobs:
+  performance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+      - name: Verify Java, migrations and real SQLite
+        run: ./mvnw -B -ntp verify
+      - name: Collect local HTTP latency
+        run: python3 tools/perf_smoke.py --output performance-results.json
+      - name: Save measurement evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: backend-performance
+          path: performance-results.json
+          if-no-files-found: warn
+          retention-days: 14
