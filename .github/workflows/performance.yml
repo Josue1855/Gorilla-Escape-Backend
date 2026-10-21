@@ -1,5 +1,10 @@
 name: Backend performance smoke
 on:
+  pull_request:
+    paths:
+      - 'tools/perf_smoke.py'
+      - '.github/workflows/performance.yml'
+      - 'pom.xml'
   workflow_dispatch:
   schedule:
     - cron: '15 9 * * 1'
