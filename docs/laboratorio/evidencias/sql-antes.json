@@ -1,0 +1,17 @@
+{
+  "query": "SELECT id,display_name,created_at FROM players ORDER BY id",
+  "rows": [
+    [
+      "00000000-0000-4000-8000-000000000001",
+      "Persona Semilla Uno",
+      "2026-10-16T00:00:00Z"
+    ],
+    [
+      "00000000-0000-4000-8000-000000000002",
+      "Persona Semilla Dos",
+      "2026-10-16T00:00:00Z"
+    ]
+  ],
+  "count": 2,
+  "integrity": "ok"
+}
