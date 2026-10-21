@@ -1,0 +1,28 @@
+{
+  "result": {
+    "type": "object",
+    "value": {
+      "caches": {
+        "gorilla-lab-shell-c38134f63b258b06": [
+          "http://127.0.0.1:4173/assets/client-Dg-bf1-v.js",
+          "http://127.0.0.1:4173/assets/lab-DnMgNl-H.js",
+          "http://127.0.0.1:4173/assets/lab-pcRIyikg.css",
+          "http://127.0.0.1:4173/assets/main-9PQvU5jj.js",
+          "http://127.0.0.1:4173/assets/main-D_4r8PFH.css",
+          "http://127.0.0.1:4173/icons/lab.svg",
+          "http://127.0.0.1:4173/index.html",
+          "http://127.0.0.1:4173/lab.html",
+          "http://127.0.0.1:4173/manifest.json"
+        ]
+      },
+      "controller": "http://127.0.0.1:4173/sw.js",
+      "online": false,
+      "registrations": [
+        {
+          "scope": "http://127.0.0.1:4173/",
+          "state": "activated"
+        }
+      ]
+    }
+  }
+}

@@ -1,23 +1,32 @@
-# Gorilla Escape — PWA Backend
+# Gorilla Escape — Backend: primer incremento de jugadores
 
-Repositorio oficial del equipo para el backend de servicios y persistencia de Gorilla Escape: Gorilimpiadas. Creado el 2026-10-16 por instrucción del Product Owner. Estado: **PLANIFICADO** para implementación; esta base contiene exclusivamente documentación.
+Spring Boot 4.1.1, Java21, SQLite JDBC 3.53.2.1 y Flyway12.4.0 (versiones del BOM). Estado: incremento funcional en rama para revisión; no es distribución final autocontenida. La integración React/SQLite está probada en el fork de laboratorio y pendiente de revisión/incorporación al upstream UI/UX. [Aprobación SQLite del PO](docs/adr/ADR-001-PLAYERS-APPROVAL.md), acotada a jugadores; PR #12 de arquitectura permanece separado.
 
-## Responsabilidad
+## Empezar en desarrollo
 
-API REST con Spring Boot, validación de DTO, almacenamiento transaccional, idempotencia y observabilidad. Unity conserva la autoridad de física, reglas y resultados. Este backend no sustituye al servicio Java local de WebRTC/IPC que ya existe en el repositorio Unity.
+```bash
+./mvnw -B -ntp verify
+java -jar target/backend-0.1.0-SNAPSHOT.jar
+```
 
-No hay aplicación ejecutable, endpoints de negocio, esquema, scripts SQL, tests ni CI implementados en esta revisión. La versión de Java/Spring Boot, motor de BD y ORM deben confirmarse antes de crear sus manifiestos; no se presume PostgreSQL ni JPA.
+Windows: usar `mvnw.cmd` para el build. Se requiere JDK21 para desarrollar; el empaquetado con JRE para usuario final es tarea futura. Primer build/wrapper/dependencias necesitan red, ejecución del JAR y migraciones no descargan componentes.
 
-## Repositorios y seguimiento
+- GET http://127.0.0.1:8090/api/players — listado paginado.
+- POST http://127.0.0.1:8090/api/players — application/json `{"displayName":"Jugador Uno"}`, responde201 después de persistir.
+- GET http://127.0.0.1:8090/openapi.json — contrato OpenAPI3.1.
 
-- [Unity y conectividad técnica](https://github.com/Josue1855/Gorilla-Escape), integración existente en develop.
-- [PWA UI/UX](https://github.com/Quintana-117/Dise-o_pwa), demo React independiente aún pendiente de integración.
-- [Backend, este repositorio](https://github.com/Josue1855/Gorilla-Escape-Backend).
-- [Project del producto](https://github.com/users/Josue1855/projects/1). La vinculación del repositorio no implica crear issues, cambiar estados ni cerrar aceptación.
-- [PR documental de arquitectura #122](https://github.com/Josue1855/Gorilla-Escape/pull/122), pendiente de revisión; contiene el índice y contratos candidatos del producto.
+Datos en directorio por usuario fuera del JAR; override GORILLA_DATA_DIR o --gorilla.storage.directory=/ruta/propia. Ver [laboratorio](docs/LAB_PLAYERS.md) para rutas, SQL antes/después, logs/JVM, errores y reinicio. [Resultado real](docs/VALIDATION_PLAYERS.md). No se guardan payloads/nombres ni SQL con valores en logs de aplicación.
 
-## Empezar
+## Integración y límites
 
-Leer [arquitectura y decisiones pendientes](docs/ARCHITECTURE.md) y [primeras tareas y aceptación](docs/DEVELOPMENT_PLAN.md). No hay comando de arranque hasta implementar la aplicación. La rama inicial main sólo registra esta fundación documental; el trabajo funcional se realizará en ramas de tarea con PR y pruebas aplicables, sin merge automático.
+[Contrato para Hiram/React](docs/API_PLAYERS.md). Default loopback; LAN sólo opt-in para laboratorio aislado. No hay auth/TLS: no publicar esta API ni equiparar CORS con autorización. SQLite no expone puerto. Unity sigue autoridad de gameplay; no se alteró el Java técnico, WebRTC/IPC ni el repositorio UI/UX. No se implementaron partidas, resultados ni rankings. POST de jugadores no garantiza idempotencia de reintento.
 
-Los ejemplos de API/BD del producto son PROPUESTO y necesitan revisión backend/Unity/UI antes de implementarse. Los resultados académicos Spring/SQL/DevTools permanecen PENDIENTE DE EJECUCIÓN. Usar exclusivamente trabajo propio del equipo y dependencias aprobadas; no incorporar prototipos descartados ni credenciales.
+Estructura modular: players/api → players/application → players/domain; infraestructura JDBC implementa el puerto del repositorio. persistence configura almacenamiento/migraciones; http controla contrato de errores, JSON, CORS y telemetría. Tests usan SQLite real en fichero y HTTP real, además de unidades aisladas.
+
+## Flujo del equipo y enlaces
+
+Ramas de tarea desde develop → PR a develop. main sólo recibe promoción de una entrega completa validada y aprobada; sin commits directos ni merge automático. [Project Backend](https://github.com/users/Josue1855/projects/2), [Unity](https://github.com/Josue1855/Gorilla-Escape), [PWA UI/UX](https://github.com/Quintana-117/Dise-o_pwa). Issues amplias #3/#4/#10 continúan parciales; [BDB-11](https://github.com/Josue1855/Gorilla-Escape-Backend/issues/13) delimita esta entrega. No se presupone un merge del PR #1 ni #12.
+
+## Laboratorio PWA de integración
+
+[Dossier de entrega y evidencias reales](docs/laboratorio/README.md): React, POST/GET, SQLite, Service Worker e IndexedDB. Incluye límites y tres capturas literales de DevTools todavía pendientes. El frontend está en un fork de trabajo; no se modificó el upstream de Hiram.

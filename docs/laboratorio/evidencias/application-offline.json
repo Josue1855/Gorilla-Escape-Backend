@@ -1,0 +1,52 @@
+{
+  "result": {
+    "type": "object",
+    "value": {
+      "cacheEntries": {
+        "gorilla-lab-shell-c6db0464109d3119": [
+          "http://127.0.0.1:4173/assets/client-CkCYsZd5.js",
+          "http://127.0.0.1:4173/assets/lab-BDz5Bz5k.js",
+          "http://127.0.0.1:4173/assets/lab-CNtcA7A7.css",
+          "http://127.0.0.1:4173/assets/main-BudevMD2.js",
+          "http://127.0.0.1:4173/assets/main-obK-jF6S.css",
+          "http://127.0.0.1:4173/icons/lab.svg",
+          "http://127.0.0.1:4173/index.html",
+          "http://127.0.0.1:4173/lab.html",
+          "http://127.0.0.1:4173/manifest.json"
+        ]
+      },
+      "controller": "http://127.0.0.1:4173/sw.js",
+      "draft": {
+        "name": "Borrador Offline PWA",
+        "uncertain": false
+      },
+      "online": false,
+      "registrations": [
+        {
+          "scope": "http://127.0.0.1:4173/",
+          "state": "activated"
+        }
+      ],
+      "snapshot": {
+        "items": [
+          {
+            "createdAt": "2026-10-16T00:00:00Z",
+            "displayName": "Persona Semilla Uno",
+            "id": "00000000-0000-4000-8000-000000000001"
+          },
+          {
+            "createdAt": "2026-10-16T00:00:00Z",
+            "displayName": "Persona Semilla Dos",
+            "id": "00000000-0000-4000-8000-000000000002"
+          },
+          {
+            "createdAt": "2026-10-17T01:03:09.174620032Z",
+            "displayName": "Jugador PWA Laboratorio",
+            "id": "bf6eee24-88e7-437f-abd1-9ed1fa2e27f8"
+          }
+        ],
+        "savedAt": "2026-10-17T01:03:18.773Z"
+      }
+    }
+  }
+}

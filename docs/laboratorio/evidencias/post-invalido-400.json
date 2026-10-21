@@ -1,0 +1,24 @@
+{
+  "status": 400,
+  "headers": {
+    "x-request-id": "24b41ece-0d75-4f50-aace-4d561511c1d0",
+    "server-timing": "app;dur=22.090",
+    "cache-control": "no-store",
+    "content-type": "application/problem+json",
+    "content-length": "281",
+    "date": "Sat, 17 Oct 2026 01:05:36 GMT",
+    "connection": "close"
+  },
+  "body": {
+    "detail": "Revisa los campos de la solicitud.",
+    "instance": "/api/players",
+    "status": 400,
+    "title": "Bad Request",
+    "type": "urn:gorilla:problem:validation-failed",
+    "code": "VALIDATION_FAILED",
+    "requestId": "24b41ece-0d75-4f50-aace-4d561511c1d0",
+    "violations": {
+      "displayName": "Valor inv\u00e1lido."
+    }
+  }
+}
