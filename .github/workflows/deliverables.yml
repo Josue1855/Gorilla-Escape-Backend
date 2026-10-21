@@ -1,5 +1,9 @@
 name: Backend deliverables
 on:
+  pull_request:
+    paths:
+      - '.github/workflows/deliverables.yml'
+      - 'pom.xml'
   workflow_dispatch:
   push:
     tags:
