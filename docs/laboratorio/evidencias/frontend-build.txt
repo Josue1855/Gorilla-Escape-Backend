@@ -1,0 +1,18 @@
+
+> gorilla-escape-pwa-controller@1.0.0 build
+> vite build && node tools/build-worker.mjs
+
+vite v6.4.4 building for production...
+transforming...
+✓ 34 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/lab.html                     0.57 kB │ gzip:  0.36 kB
+dist/index.html                   1.51 kB │ gzip:  0.71 kB
+dist/assets/lab-pcRIyikg.css      1.87 kB │ gzip:  0.87 kB
+dist/assets/main-D_4r8PFH.css     7.81 kB │ gzip:  2.24 kB
+dist/assets/main-9PQvU5jj.js      5.68 kB │ gzip:  2.24 kB
+dist/assets/lab-DnMgNl-H.js       8.05 kB │ gzip:  3.52 kB
+dist/assets/client-Dg-bf1-v.js  143.68 kB │ gzip: 46.12 kB
+✓ built in 807ms
+Service Worker: gorilla-lab-shell-c38134f63b258b06 9 compiled shell assets; API excluded
