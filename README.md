@@ -29,4 +29,6 @@ Ramas de tarea desde develop → PR a develop. main sólo recibe promoción de u
 
 ## Laboratorio PWA de integración
 
+[Práctica de pruebas unitarias IDGS101: findAll y create con JUnit 5 y Mockito](docs/laboratorio/unitarias/README.md).
+
 [Dossier de entrega y evidencias reales](docs/laboratorio/README.md): React, POST/GET, SQLite, Service Worker e IndexedDB. Incluye límites y tres capturas literales de DevTools todavía pendientes. El frontend está en un fork de trabajo; no se modificó el upstream de Hiram.

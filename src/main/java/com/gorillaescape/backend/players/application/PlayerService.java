@@ -21,5 +21,5 @@ public class PlayerService {
     }
 
     @Transactional(readOnly = true)
-    public List<Player> list(int limit, int offset) { return repository.list(limit, offset); }
+    public List<Player> findAll(int limit, int offset) { return repository.list(limit, offset); }
 }

@@ -20,7 +20,7 @@ public class PlayerController {
     @GetMapping
     public PlayerPage list(@RequestParam(defaultValue = "50") @Min(1) @Max(100) int limit,
                            @RequestParam(defaultValue = "0") @Min(0) @Max(100000) int offset) {
-        return new PlayerPage(service.list(limit, offset), limit, offset);
+        return new PlayerPage(service.findAll(limit, offset), limit, offset);
     }
 
     @PostMapping

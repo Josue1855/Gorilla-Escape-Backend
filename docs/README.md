@@ -10,3 +10,4 @@
 El PR #12 contiene la evaluación amplia de arquitectura y permanece separado. Esta rama incluye sólo la aprobación acotada y el primer incremento funcional.
 
 - [Laboratorio PWA: dossier de entrega y evidencias](laboratorio/README.md).
+- [Práctica IDGS101: JUnit 5 y Mockito para findAll/create](laboratorio/unitarias/README.md).
