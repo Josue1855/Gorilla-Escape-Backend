@@ -1,4 +1,4 @@
-# Práctica IDGS101: pruebas unitarias de findAll y create
+# Práctica IDGS102: pruebas unitarias de findAll y create
 
 Asignatura: Aplicaciones Web Progresivas / Desarrollo Backend. Unidad: Pruebas de Software y Calidad de Componentes.
 

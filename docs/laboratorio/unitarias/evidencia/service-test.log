@@ -31,7 +31,7 @@ WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicA
 WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
 WARNING: Dynamic loading of agents will be disallowed by default in a future release
 OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
-[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.032 s -- in PlayerService: findAll y create sin base de datos
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.885 s -- in PlayerService: findAll y create sin base de datos
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -40,6 +40,6 @@ OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader clas
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  3.239 s
-[INFO] Finished at: 2026-11-05T17:56:36-06:00
+[INFO] Total time:  2.733 s
+[INFO] Finished at: 2026-11-05T17:58:13-06:00
 [INFO] ------------------------------------------------------------------------

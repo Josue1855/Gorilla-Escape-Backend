@@ -14,7 +14,7 @@ try {
     $mavenArguments = @('-B', '-ntp', 'test', '-l', $relativeLog)
     if ($ServiceOnly) { $mavenArguments += '-Dtest=PlayerServiceTest' }
 
-    Write-Host 'IDGS101 - Gorilla Escape Backend - Pruebas unitarias'
+    Write-Host 'IDGS102 - Gorilla Escape Backend - Pruebas unitarias'
     [xml]$projectPom = Get-Content pom.xml -Raw
     Write-Host ('JUnit Jupiter ' + $projectPom.project.properties.'junit-jupiter.version' + ' | Mockito | AssertJ')
     Write-Host "Repositorio: $repositoryRoot"
