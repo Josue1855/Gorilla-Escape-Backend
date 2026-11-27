@@ -1,0 +1,61 @@
+name: Backend deliverables
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/deliverables.yml'
+      - 'pom.xml'
+  workflow_dispatch:
+  push:
+    tags:
+      - 'backend-v*'
+permissions:
+  contents: read
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+      - name: Verify and build
+        run: ./mvnw -B -ntp verify
+      - name: Generate manifest and development distribution
+        shell: bash
+        run: |
+          mkdir -p package
+          cp target/backend-*.jar package/
+          printf 'Gorilla Escape Backend (Java 21 required)\nNot a bundled JRE/desktop installer.\n' > package/README.txt
+          printf 'Repository: %s\nCommit: %s\nReference: %s\n' "$GITHUB_REPOSITORY" "$GITHUB_SHA" "$GITHUB_REF_NAME" > package/BUILD_INFO.txt
+          (cd package && sha256sum *.jar > SHA256SUMS.txt)
+          (cd package && zip -9 ../backend-dev-package.zip ./*)
+      - name: Upload developer package
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: backend-dev-package
+          path: backend-dev-package.zip
+          retention-days: 30
+      - name: Upload test reports
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: backend-test-reports
+          path: target/surefire-reports/*.xml
+          if-no-files-found: warn
+  release:
+    if: startsWith(github.ref, 'refs/tags/backend-v')
+    needs: package
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: backend-dev-package
+      - name: Publish versioned GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" backend-dev-package.zip --repo "$GITHUB_REPOSITORY" --verify-tag --generate-notes --title "$GITHUB_REF_NAME"

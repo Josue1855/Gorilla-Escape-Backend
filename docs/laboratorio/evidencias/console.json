@@ -1,0 +1,134 @@
+[
+  {
+    "level": "info",
+    "message": "event=pwa_registered",
+    "timestamp": "2026-10-17T01:02:17.182Z",
+    "url": "http://127.0.0.1:4173/assets/lab-BDz5Bz5k.js"
+  },
+  {
+    "level": "info",
+    "message": "event=players_http method=GET status=200 durationMs=214.400 requestId=473c5872-df7f-4a67-bbbc-7bb111d50002",
+    "timestamp": "2026-10-17T01:02:17.512Z",
+    "url": "http://127.0.0.1:4173/assets/lab-BDz5Bz5k.js"
+  },
+  {
+    "level": "info",
+    "message": "event=players_rendered count=0 source=backend",
+    "timestamp": "2026-10-17T01:02:17.512Z",
+    "url": "http://127.0.0.1:4173/assets/lab-BDz5Bz5k.js"
+  },
+  {
+    "level": "info",
+    "message": "event=players_http method=GET status=200 durationMs=37.000 requestId=cbdbd1bb-0b56-4bd0-9e66-4713e05273e2",
+    "timestamp": "2026-10-17T01:03:03.063Z",
+    "url": "http://127.0.0.1:4173/assets/lab-BDz5Bz5k.js"
+  },
+  {
+    "level": "info",
+    "message": "event=players_rendered count=2 source=backend",
+    "timestamp": "2026-10-17T01:03:03.070Z",
+    "url": "http://127.0.0.1:4173/assets/lab-BDz5Bz5k.js"
+  },
+  {
+    "level": "info",
+    "message": "event=players_http method=POST status=201 durationMs=81.800 requestId=677247f4-9698-492b-b567-3a1c7cf27b46",
+    "timestamp": "2026-10-17T01:03:09.211Z",
+    "url": "http://127.0.0.1:4173/assets/lab-BDz5Bz5k.js"
+  },
+  {
+    "level": "info",
+    "message": "event=players_http method=GET status=200 durationMs=43.500 requestId=bf1d7a66-e6a1-4ebc-8e09-dc897beaa4c2",
+    "timestamp": "2026-10-17T01:03:18.777Z",
+    "url": "http://127.0.0.1:4173/assets/lab-BDz5Bz5k.js"
+  },
+  {
+    "level": "info",
+    "message": "event=players_rendered count=3 source=backend",
+    "timestamp": "2026-10-17T01:03:18.788Z",
+    "url": "http://127.0.0.1:4173/assets/lab-BDz5Bz5k.js"
+  },
+  {
+    "level": "info",
+    "message": "event=pwa_registered",
+    "timestamp": "2026-10-17T01:03:19.863Z",
+    "url": "http://127.0.0.1:4173/assets/lab-BDz5Bz5k.js"
+  },
+  {
+    "level": "warn",
+    "message": "event=players_http method=GET status=network_error",
+    "timestamp": "2026-10-17T01:03:20.143Z",
+    "url": "http://127.0.0.1:4173/assets/lab-BDz5Bz5k.js"
+  },
+  {
+    "level": "info",
+    "message": "event=pwa_registered",
+    "timestamp": "2026-10-17T01:03:28.386Z",
+    "url": "http://127.0.0.1:4173/assets/lab-BDz5Bz5k.js"
+  },
+  {
+    "level": "warn",
+    "message": "event=players_http method=GET status=network_error",
+    "timestamp": "2026-10-17T01:03:28.564Z",
+    "url": "http://127.0.0.1:4173/assets/lab-BDz5Bz5k.js"
+  },
+  {
+    "level": "info",
+    "message": "event=players_http method=GET status=200 durationMs=13.100 requestId=7497a948-0ea4-4bdd-ad80-10a0cc741e5a",
+    "timestamp": "2026-10-17T01:03:48.347Z",
+    "url": "http://127.0.0.1:4173/assets/lab-BDz5Bz5k.js"
+  },
+  {
+    "level": "info",
+    "message": "event=players_rendered count=3 source=backend",
+    "timestamp": "2026-10-17T01:03:48.362Z",
+    "url": "http://127.0.0.1:4173/assets/lab-BDz5Bz5k.js"
+  },
+  {
+    "level": "info",
+    "message": "event=players_http method=POST status=201 durationMs=47.800 requestId=be3229c7-613b-4834-b7d2-af781ae2e9bd",
+    "timestamp": "2026-10-17T01:03:49.848Z",
+    "url": "http://127.0.0.1:4173/assets/lab-BDz5Bz5k.js"
+  },
+  {
+    "level": "info",
+    "message": "event=players_http method=GET status=200 durationMs=52.600 requestId=2b30d5f9-94b6-4ace-b300-a1ee57e414cb",
+    "timestamp": "2026-10-17T01:03:50.372Z",
+    "url": "http://127.0.0.1:4173/assets/lab-BDz5Bz5k.js"
+  },
+  {
+    "level": "info",
+    "message": "event=players_rendered count=4 source=backend",
+    "timestamp": "2026-10-17T01:03:50.373Z",
+    "url": "http://127.0.0.1:4173/assets/lab-BDz5Bz5k.js"
+  },
+  {
+    "level": "warn",
+    "message": "event=players_http method=POST status=network_error",
+    "timestamp": "2026-10-17T01:05:13.402Z",
+    "url": "http://127.0.0.1:4173/assets/lab-BDz5Bz5k.js"
+  },
+  {
+    "level": "info",
+    "message": "event=pwa_registered",
+    "timestamp": "2026-10-17T01:05:13.794Z",
+    "url": "http://127.0.0.1:4173/assets/lab-BDz5Bz5k.js"
+  },
+  {
+    "level": "warn",
+    "message": "event=players_http method=GET status=network_error",
+    "timestamp": "2026-10-17T01:05:13.840Z",
+    "url": "http://127.0.0.1:4173/assets/lab-BDz5Bz5k.js"
+  },
+  {
+    "level": "info",
+    "message": "event=players_http method=GET status=200 durationMs=17.300 requestId=10ff0ad5-f78f-4548-90ca-cd378741bc03",
+    "timestamp": "2026-10-17T01:05:15.506Z",
+    "url": "http://127.0.0.1:4173/assets/lab-BDz5Bz5k.js"
+  },
+  {
+    "level": "info",
+    "message": "event=players_rendered count=4 source=backend",
+    "timestamp": "2026-10-17T01:05:15.506Z",
+    "url": "http://127.0.0.1:4173/assets/lab-BDz5Bz5k.js"
+  }
+]

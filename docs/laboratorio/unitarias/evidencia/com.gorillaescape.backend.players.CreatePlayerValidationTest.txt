@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.gorillaescape.backend.players.CreatePlayerValidationTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.615 s -- in com.gorillaescape.backend.players.CreatePlayerValidationTest

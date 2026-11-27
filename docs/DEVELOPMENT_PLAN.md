@@ -1,6 +1,6 @@
 # Primeras tareas propuestas
 
-Última revisión: 2026-10-16. Estado: PROPUESTO; estas filas no son issues remotas ni tareas ejecutadas. No hay fechas/Sprint/responsables personales asignados.
+Última revisión: 2026-10-16. Las filas originales siguientes son planificación de producto; el estado del incremento actual se detalla al final. No hay fechas/Sprint/responsables personales asignados.
 
 | Prioridad | Tarea | Aceptación / evidencia requerida |
 |---|---|---|
@@ -12,4 +12,8 @@
 | P1 | Logs, métricas y laboratorio | Método/HTTP/duración/requestId/JVM, consulta SQL e interfaz coincidentes; evidencias auténticas |
 | P1 | Probar WAN desconectada con LAN activa y backend inaccesible | Comportamientos separados, sin éxito ficticio ni resultados duplicados al reconectar |
 
-El [laboratorio del producto](https://github.com/Josue1855/Gorilla-Escape/blob/17b6945cd5ffef321a8eb58788529a7cb42719a0/docs/04-testing/PWA_TEST_LAB.md) detalla LAB-01..10. Todo resultado de ejecución sigue PENDIENTE DE EJECUCIÓN. La preparación de este repositorio no cierra T019/T020/F05/E0 ni autoriza implementar gameplay durante el encargo documental.
+El [laboratorio del producto](https://github.com/Josue1855/Gorilla-Escape/blob/17b6945cd5ffef321a8eb58788529a7cb42719a0/docs/04-testing/PWA_TEST_LAB.md) detalla LAB-01..10. La integración PWA/GET/POST/SQLite y el offline emulado ya fueron ejecutados en el fork; el [dossier](laboratorio/README.md) conserva la evidencia. Quedan tres capturas literales de DevTools, integración al upstream y validación física; no se declara cerrado todo el laboratorio. La preparación de este repositorio no cierra T019/T020/F05/E0 ni autoriza implementar gameplay durante el encargo documental.
+
+## Incremento actual
+
+La [issue #13](https://github.com/Josue1855/Gorilla-Escape-Backend/issues/13) delimita jugadores: GET/POST, SQLite real, migración, validaciones, SQL, OpenAPI y pruebas. Ver [resultados](VALIDATION_PLAYERS.md) y [procedimiento reproducible](LAB_PLAYERS.md). Las issues #3, #4 y #10 avanzan parcialmente; no se consideran cerradas por esta entrega. No se implementan sesiones, resultados, rankings, gameplay ni el instalador. Se requiere revisión del PR hacia develop antes de integrar.

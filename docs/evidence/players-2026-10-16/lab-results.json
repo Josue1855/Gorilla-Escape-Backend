@@ -1,0 +1,382 @@
+{
+  "classification": "AUTOMATED BACKEND LAB; no PWA browser, physical LAN or production packaging",
+  "jarSha256": "ee57b46291bc880a7204fd584a101a65ec6c46cd46bf51ec9f2a084c965d3b56",
+  "pythonSqliteVersion": "3.45.1",
+  "startedAtEpochSeconds": 1792198462.067839,
+  "runtime": {
+    "port": 38579,
+    "sqliteVersion": "3.53.2",
+    "schemaVersion": "1",
+    "javaVersion": "21.0.12.1+1-1-24.04.4-Ubuntu"
+  },
+  "beforePost": {
+    "rows": [
+      {
+        "id": "00000000-0000-4000-8000-000000000001",
+        "displayName": "Persona Semilla Uno",
+        "createdAt": "2026-10-16T00:00:00Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000002",
+        "displayName": "Persona Semilla Dos",
+        "createdAt": "2026-10-16T00:00:00Z"
+      }
+    ],
+    "integrityCheck": "ok",
+    "foreignKeyViolations": [],
+    "appliedMigrations": [
+      [
+        "1",
+        1
+      ]
+    ]
+  },
+  "sqlBeforePost": [
+    {
+      "sql": "SELECT id, display_name, created_at FROM players ORDER BY created_at, id",
+      "columns": [
+        "id",
+        "display_name",
+        "created_at"
+      ],
+      "rows": [
+        [
+          "00000000-0000-4000-8000-000000000001",
+          "Persona Semilla Uno",
+          "2026-10-16T00:00:00Z"
+        ],
+        [
+          "00000000-0000-4000-8000-000000000002",
+          "Persona Semilla Dos",
+          "2026-10-16T00:00:00Z"
+        ]
+      ]
+    },
+    {
+      "sql": "SELECT count(*) AS player_count FROM players",
+      "columns": [
+        "player_count"
+      ],
+      "rows": [
+        [
+          2
+        ]
+      ]
+    },
+    {
+      "sql": "SELECT version, success FROM flyway_schema_history ORDER BY installed_rank",
+      "columns": [
+        "version",
+        "success"
+      ],
+      "rows": [
+        [
+          "1",
+          1
+        ]
+      ]
+    },
+    {
+      "sql": "PRAGMA integrity_check",
+      "columns": [
+        "integrity_check"
+      ],
+      "rows": [
+        [
+          "ok"
+        ]
+      ]
+    },
+    {
+      "sql": "PRAGMA foreign_key_check",
+      "columns": [
+        "table",
+        "rowid",
+        "parent",
+        "fkid"
+      ],
+      "rows": []
+    }
+  ],
+  "post": {
+    "httpStatus": 201,
+    "body": {
+      "id": "eb3fc9f5-3f2d-4f86-a037-1b53004a6635",
+      "displayName": "Jugador Laboratorio",
+      "createdAt": "2026-10-17T00:54:24.715423058Z"
+    },
+    "requestId": "1def6485-e980-4938-9db7-b613491eb216",
+    "serverTiming": "app;dur=123.869",
+    "clientElapsedMs": 184.899
+  },
+  "afterPost": {
+    "rows": [
+      {
+        "id": "00000000-0000-4000-8000-000000000001",
+        "displayName": "Persona Semilla Uno",
+        "createdAt": "2026-10-16T00:00:00Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000002",
+        "displayName": "Persona Semilla Dos",
+        "createdAt": "2026-10-16T00:00:00Z"
+      },
+      {
+        "id": "eb3fc9f5-3f2d-4f86-a037-1b53004a6635",
+        "displayName": "Jugador Laboratorio",
+        "createdAt": "2026-10-17T00:54:24.715423058Z"
+      }
+    ],
+    "integrityCheck": "ok",
+    "foreignKeyViolations": [],
+    "appliedMigrations": [
+      [
+        "1",
+        1
+      ]
+    ]
+  },
+  "sqlAfterPost": [
+    {
+      "sql": "SELECT id, display_name, created_at FROM players ORDER BY created_at, id",
+      "columns": [
+        "id",
+        "display_name",
+        "created_at"
+      ],
+      "rows": [
+        [
+          "00000000-0000-4000-8000-000000000001",
+          "Persona Semilla Uno",
+          "2026-10-16T00:00:00Z"
+        ],
+        [
+          "00000000-0000-4000-8000-000000000002",
+          "Persona Semilla Dos",
+          "2026-10-16T00:00:00Z"
+        ],
+        [
+          "eb3fc9f5-3f2d-4f86-a037-1b53004a6635",
+          "Jugador Laboratorio",
+          "2026-10-17T00:54:24.715423058Z"
+        ]
+      ]
+    },
+    {
+      "sql": "SELECT count(*) AS player_count FROM players",
+      "columns": [
+        "player_count"
+      ],
+      "rows": [
+        [
+          3
+        ]
+      ]
+    },
+    {
+      "sql": "SELECT version, success FROM flyway_schema_history ORDER BY installed_rank",
+      "columns": [
+        "version",
+        "success"
+      ],
+      "rows": [
+        [
+          "1",
+          1
+        ]
+      ]
+    },
+    {
+      "sql": "PRAGMA integrity_check",
+      "columns": [
+        "integrity_check"
+      ],
+      "rows": [
+        [
+          "ok"
+        ]
+      ]
+    },
+    {
+      "sql": "PRAGMA foreign_key_check",
+      "columns": [
+        "table",
+        "rowid",
+        "parent",
+        "fkid"
+      ],
+      "rows": []
+    }
+  ],
+  "get": {
+    "httpStatus": 200,
+    "body": {
+      "items": [
+        {
+          "id": "00000000-0000-4000-8000-000000000001",
+          "displayName": "Persona Semilla Uno",
+          "createdAt": "2026-10-16T00:00:00Z"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000002",
+          "displayName": "Persona Semilla Dos",
+          "createdAt": "2026-10-16T00:00:00Z"
+        },
+        {
+          "id": "eb3fc9f5-3f2d-4f86-a037-1b53004a6635",
+          "displayName": "Jugador Laboratorio",
+          "createdAt": "2026-10-17T00:54:24.715423058Z"
+        }
+      ],
+      "limit": 50,
+      "offset": 0
+    },
+    "requestId": "88ae0003-713e-4265-8336-83cb1abdfe86",
+    "serverTiming": "app;dur=27.971",
+    "clientElapsedMs": 31.386
+  },
+  "invalidPost": {
+    "httpStatus": 400,
+    "body": {
+      "detail": "Revisa los campos de la solicitud.",
+      "instance": "/api/players",
+      "status": 400,
+      "title": "Bad Request",
+      "type": "urn:gorilla:problem:validation-failed",
+      "code": "VALIDATION_FAILED",
+      "requestId": "fc25f37d-8304-45e5-9b6a-0973ee43597d",
+      "violations": {
+        "displayName": "Valor inválido."
+      }
+    },
+    "requestId": "fc25f37d-8304-45e5-9b6a-0973ee43597d",
+    "serverTiming": "app;dur=33.194",
+    "clientElapsedMs": 35.853
+  },
+  "afterInvalidPost": {
+    "rows": [
+      {
+        "id": "00000000-0000-4000-8000-000000000001",
+        "displayName": "Persona Semilla Uno",
+        "createdAt": "2026-10-16T00:00:00Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000002",
+        "displayName": "Persona Semilla Dos",
+        "createdAt": "2026-10-16T00:00:00Z"
+      },
+      {
+        "id": "eb3fc9f5-3f2d-4f86-a037-1b53004a6635",
+        "displayName": "Jugador Laboratorio",
+        "createdAt": "2026-10-17T00:54:24.715423058Z"
+      }
+    ],
+    "integrityCheck": "ok",
+    "foreignKeyViolations": [],
+    "appliedMigrations": [
+      [
+        "1",
+        1
+      ]
+    ]
+  },
+  "firstTermination": {
+    "method": "terminate (SIGTERM on POSIX; not a window-close certification)",
+    "exitCode": 143,
+    "forced": false
+  },
+  "restartRuntime": {
+    "port": 34253,
+    "sqliteVersion": "3.53.2",
+    "schemaVersion": "1",
+    "javaVersion": "21.0.12.1+1-1-24.04.4-Ubuntu"
+  },
+  "getAfterRestart": {
+    "httpStatus": 200,
+    "body": {
+      "items": [
+        {
+          "id": "00000000-0000-4000-8000-000000000001",
+          "displayName": "Persona Semilla Uno",
+          "createdAt": "2026-10-16T00:00:00Z"
+        },
+        {
+          "id": "00000000-0000-4000-8000-000000000002",
+          "displayName": "Persona Semilla Dos",
+          "createdAt": "2026-10-16T00:00:00Z"
+        },
+        {
+          "id": "eb3fc9f5-3f2d-4f86-a037-1b53004a6635",
+          "displayName": "Jugador Laboratorio",
+          "createdAt": "2026-10-17T00:54:24.715423058Z"
+        }
+      ],
+      "limit": 50,
+      "offset": 0
+    },
+    "requestId": "e89ad5b1-90c1-481c-bb67-5b5ad9c8f4c0",
+    "serverTiming": "app;dur=73.570",
+    "clientElapsedMs": 116.137
+  },
+  "afterRestart": {
+    "rows": [
+      {
+        "id": "00000000-0000-4000-8000-000000000001",
+        "displayName": "Persona Semilla Uno",
+        "createdAt": "2026-10-16T00:00:00Z"
+      },
+      {
+        "id": "00000000-0000-4000-8000-000000000002",
+        "displayName": "Persona Semilla Dos",
+        "createdAt": "2026-10-16T00:00:00Z"
+      },
+      {
+        "id": "eb3fc9f5-3f2d-4f86-a037-1b53004a6635",
+        "displayName": "Jugador Laboratorio",
+        "createdAt": "2026-10-17T00:54:24.715423058Z"
+      }
+    ],
+    "integrityCheck": "ok",
+    "foreignKeyViolations": [],
+    "appliedMigrations": [
+      [
+        "1",
+        1
+      ]
+    ]
+  },
+  "cleanup": {
+    "affectedRows": 3,
+    "snapshot": {
+      "rows": [],
+      "integrityCheck": "ok",
+      "foreignKeyViolations": [],
+      "appliedMigrations": [
+        [
+          "1",
+          1
+        ]
+      ]
+    }
+  },
+  "secondTermination": {
+    "method": "terminate (SIGTERM on POSIX; not a window-close certification)",
+    "exitCode": 143,
+    "forced": false
+  },
+  "httpLogSamples": [
+    "event=http_request requestId=1def6485-e980-4938-9db7-b613491eb216 method=POST route=/api/players status=201 durationMs=123.869 jvmHeapUsedBytes=64634640",
+    "event=http_request requestId=88ae0003-713e-4265-8336-83cb1abdfe86 method=GET route=/api/players status=200 durationMs=27.971 jvmHeapUsedBytes=68828944",
+    "event=http_request requestId=fc25f37d-8304-45e5-9b6a-0973ee43597d method=POST route=/api/players status=400 durationMs=33.194 jvmHeapUsedBytes=68828944",
+    "event=http_request requestId=e89ad5b1-90c1-481c-bb67-5b5ad9c8f4c0 method=GET route=/api/players status=200 durationMs=73.570 jvmHeapUsedBytes=18911256"
+  ],
+  "status": "PASS",
+  "limitations": [
+    "Heap samples are JVM heap, not RSS or per-request allocations",
+    "Server-Timing excludes network transfer",
+    "No idempotency/retry guarantee for POST",
+    "No browser screenshots or frontend integration executed",
+    "No physical phone, installer or clean-PC acceptance"
+  ],
+  "finishedAtEpochSeconds": 1792198467.6029015
+}

@@ -1,0 +1,28 @@
+name: CodeQL Java security analysis
+on:
+  pull_request:
+    branches: [develop, main]
+  push:
+    branches: [develop, main]
+  schedule:
+    - cron: '25 10 * * 2'
+permissions:
+  contents: read
+  security-events: write
+jobs:
+  java-codeql:
+    name: CodeQL Java
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Initialize CodeQL Java analysis
+        uses: github/codeql-action/init@v4
+        with:
+          languages: java-kotlin
+          build-mode: none
+          queries: security-extended
+      - name: Run CodeQL scan
+        uses: github/codeql-action/analyze@v4
+        with:
+          category: /language:java-kotlin

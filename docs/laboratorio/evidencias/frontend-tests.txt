@@ -1,0 +1,26 @@
+
+> gorilla-escape-pwa-controller@1.0.0 test
+> node --test tests/*.test.mjs
+
+event=players_http method=GET status=200 durationMs=17.167 requestId=none
+event=players_http method=POST status=201 durationMs=0.487 requestId=request-fixture
+event=players_http method=POST status=200 durationMs=0.211 requestId=none
+event=players_http method=POST status=network_error
+event=players_http method=POST status=400 durationMs=0.177 requestId=fixture
+event=players_http method=GET status=200 durationMs=0.200 requestId=none
+event=players_http method=GET status=200 durationMs=0.116 requestId=none
+✔ normaliza NFC, recorta y valida los límites del contrato (1.49058ms)
+✔ GET valida la respuesta y conserva identidad (19.161227ms)
+✔ POST serializa sólo el nombre y requiere 201 (0.727117ms)
+✔ POST con 200 no es una confirmación válida (0.623802ms)
+✔ fallo de red no se reintenta ni se presenta como guardado (0.230878ms)
+✔ 400 del backend conserva código y correlación (0.387678ms)
+✔ HTML de proxy y listado malformado no generan datos ficticios (0.615429ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 83.207499

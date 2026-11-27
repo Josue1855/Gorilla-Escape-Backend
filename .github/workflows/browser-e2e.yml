@@ -1,0 +1,57 @@
+name: Browser PWA to Java and SQLite integration
+on:
+  pull_request:
+    branches: [develop, main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  browser-integration:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          path: backend
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: Josue1855/Dise-o_pwa
+          ref: develop
+          path: pwa
+      - uses: actions/setup-java@b6effb05e454b25005698d916606bdc6ffcbf961
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+          cache-dependency-path: backend/pom.xml
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: pwa/package-lock.json
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Verify and package Java backend with real SQLite tests
+        working-directory: backend
+        run: ./mvnw -B -ntp verify
+      - name: Build PWA laboratory React UI
+        working-directory: pwa
+        run: |
+          npm ci
+          npm test
+          npm run build
+      - name: Install pinned browser test environment
+        run: |
+          python -m pip install playwright==1.55.0
+          python -m playwright install --with-deps chromium
+      - name: Validate browser POST/GET and SQLite persistence end to end
+        run: python backend/tools/browser_e2e.py --frontend pwa --output e2e-results
+      - name: Retain test results and logs
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: pwa-backend-sqlite-e2e
+          path: e2e-results/
+          if-no-files-found: warn
+          retention-days: 14

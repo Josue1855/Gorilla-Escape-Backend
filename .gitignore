@@ -1,0 +1,11 @@
+/target/
+/.idea/
+*.iml
+/lab-output/
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+/backend.lock
+
+__pycache__/
